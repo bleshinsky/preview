@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Email Preview - Last Chance to Stay Connected</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      body { padding: 20px !important; }
+      .container { padding: 20px !important; }
+    }
+    body {
+      font-family: Figtree, 'Helvetica Neue', sans-serif;
+      color: #1D1E20;
+      line-height: 1.6;
+      padding: 20px;
+      margin: 0;
+      background-color: #F9F7F5;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+    .logo-placeholder {
+      width: 200px;
+      height: 60px;
+      background: #f8f9fa;
+      border: 2px dashed #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      color: #6c757d;
+      font-size: 14px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    .button {
+      display: inline-block;
+      background-color: #1D1E20;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #333;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .preview-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+      margin: -20px -20px 20px -20px;
+    }
+    .preview-header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .preview-header p {
+      margin: 5px 0 0 0;
+      opacity: 0.9;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-header">
+    <h2>📧 Email Campaign Preview</h2>
+    <p>This is how your email will look to subscribers</p>
+  </div>
+  
+  <div class="container">
+    <div class="logo">
+      <!-- If you added a logo to images/ folder, uncomment this line and comment out the placeholder: -->
+      <!-- <img src="images/client-logo.png" alt="The Clinic Logo" width="200"> -->
+      
+      <!-- Remove this placeholder when you have the actual logo: -->
+      <div class="logo-placeholder">
+        CLIENT LOGO HERE
+      </div>
+    </div>
+    
+    <h1>Last Chance to Stay Connected</h1>
+    <p>Hi <strong>Sarah</strong>,</p>
+    <p>This is your final reminder. We'd love to continue sharing skin health insights and product recommendations tailored to your journey.</p>
+    <p><a href="#" class="button">Yes, Keep Me In</a></p>
+    
+    <div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 4px; border-left: 4px solid #28a745;">
+      <h3 style="margin-top: 0; color: #155724;">✅ Ready for Klaviyo</h3>
+      <p style="font-size: 14px; color: #155724; margin-bottom: 10px;">This template uses:</p>
+      <ul style="font-size: 13px; color: #155724; margin: 0;">
+        <li><strong>{{ first_name | default:"there" }}</strong> - Shows as "Sarah" in preview</li>
+        <li><strong>{{ manage_preferences_url }}</strong> - Preference center link</li>
+        <li>Responsive design for mobile devices</li>
+        <li>Professional email styling</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

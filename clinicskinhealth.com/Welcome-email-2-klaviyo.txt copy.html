@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Skin, Your Way</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      body { padding: 20px !important; }
+      .container { padding: 20px !important; }
+    }
+    body {
+      font-family: Figtree, 'Helvetica Neue', sans-serif;
+      color: #1D1E20;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+      background-color: #F9F7F5;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 40px;
+      background: #ffffff;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+    .logo-placeholder {
+      width: 200px;
+      height: 60px;
+      background: #f8f9fa;
+      border: 2px dashed #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      color: #6c757d;
+      font-size: 14px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .preview-note {
+      background: #e7f3ff;
+      border: 1px solid #b6d7ff;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #0066cc;
+    }
+    .button { background-color: #c5a68c; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-right: 10px; }
+    .footer { font-size: 12px; color: #888; text-align: center; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+ <!--     <div class="header">-->
+    <div class="logo">
+      <!-- Option 1: Use local logo file (recommended) -->
+      <img src="images/theclinic_primary_rgb_900px_w_72ppi.png" alt="The Clinic Logo" width="200">
+      
+    </div>
+    <h1>Your Skin, Your Way</h1>
+    <p>Some begin their skin health journey in clinic. Others start at home. At The Clinic, both pathways are supported by expert care and thoughtful guidance.</p>
+    <p>If you prefer a hands-on approach, our therapists are ready to welcome you. If you’re looking for results from home, our curated skincare delivers what your skin needs.</p>
+
+    <!-- Dynamic Blocks using Klaviyo logic -->
+    {% if person|lookup:'Viewed Category' == 'skincare' %}
+      <p><strong>Start here:</strong> Explore our top-performing skincare collections designed for visible results.</p>
+      <p><a href="https://clinicskinhealth.com/collections/skincare" class="button">Shop Now</a></p>
+    {% elif person|lookup:'Viewed Page URL' contains '/services' %}
+      <p><strong>Book in-clinic:</strong> Let our therapists guide you with customised treatments and consultations.</p>
+      <p><a href="https://clinicskinhealth.com/products/bespoke-consultation-skin-analysis" class="button">Book Now</a></p>
+    {% else %}
+      <p><a href="https://clinicskinhealth.com/pages/our-services" class="button">Explore All Options</a></p>
+    {% endif %}
+
+    <p>With care,<br>The Clinic Skin Health & Wellness</p>
+    <div class="footer">
+      G24/6 Provan Street, Campbell ACT 2612 | <a href="https://clinicskinhealth.com">clinicskinhealth.com</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
